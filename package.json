@@ -1,0 +1,18 @@
+{
+  "name": "selectionx",
+  "repo": "zesk/selectionx",
+  "description": "DOM selection manipulation in contenteditable components and text inputs/widgets.",
+  "version": "0.1.0",
+  "keywords": [
+    "select",
+    "selection",
+    "range"
+  ],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "component": {
+    "scripts": {}
+  }
+}
