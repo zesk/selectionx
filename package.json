@@ -2,7 +2,7 @@
   "name": "selectionx",
   "repo": "zesk/selectionx",
   "description": "DOM selection manipulation in contenteditable components and text inputs/widgets.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "select",
     "selection",
