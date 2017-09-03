@@ -1,5 +1,5 @@
 /**
- * @see https://www.npmjs.com/package/selection
+ *
  */
 function Selection(el) {
 	if (!(this instanceof Selection)) {
