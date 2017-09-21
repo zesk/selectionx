@@ -28,18 +28,19 @@ Selection.prototype.restore = function(range) {
 		return;
 	}
 	this.el.focus();
-		if (window.getSelection) {
-			//non IE and there is already a selection
-			var s = window.getSelection();
-			if (s.rangeCount > 0) s.removeAllRanges();
-			s.addRange(range);
-		} else if (document.createRange) {
-			//non IE and no selection
-			window.getSelection().addRange(range);
-		} else if (document.selection) {
-			//IE
-			range.select();
+	if (window.getSelection) {
+		//non IE and there is already a selection
+		var s = window.getSelection();
+		if (s.rangeCount > 0) {
+			s.removeAllRanges();
 		}
+		s.addRange(range);
+	} else if (document.createRange) {
+		//non IE and no selection
+		window.getSelection().addRange(range);
+	} else if (document.selection) {
+		//IE
+		range.select();
 	}
 };
 
@@ -48,7 +49,7 @@ Selection.prototype.select = function(a, b) {
 
 	// swap
 	if (a > b) {
-		let t = a;
+		var t = a;
 		a = b;
 		b = t;
 	}
