@@ -14,7 +14,12 @@ function Selection(el) {
 Selection.prototype.save = function() {
 	if (window.getSelection) {
 		//non IE Browsers
-		return window.getSelection().getRangeAt(0);
+		var s = window.getSelection();
+		if (s.rangeCount > 0) {
+			return window.getSelection().getRangeAt(0);
+		} else {
+			return null;
+		}
 	} else if (document.selection) {
 		//IE
 		return document.selection.createRange();
